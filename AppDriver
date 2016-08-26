@@ -1,14 +1,9 @@
 package continuas_effective_managment;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class AppDriver {
-	private int hours;
 	private int noVehicles;
 	private int[][] lookup;
 
