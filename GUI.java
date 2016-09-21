@@ -64,42 +64,40 @@ public class GUI extends Application implements EventHandler<ActionEvent>{
 
 	public GridPane createNode(){
 		GridPane tempBoard = new GridPane();
-		tempBoard.setPadding(new Insets(5));
-	    tempBoard.setHgap(5);
-	    tempBoard.setVgap(5);
-	    ColumnConstraints column1 = new ColumnConstraints(500);
-	    ColumnConstraints column2 = new ColumnConstraints(50, 150, 300);
-	    column2.setHgrow(Priority.ALWAYS);
-	    tempBoard.getColumnConstraints().addAll(column1, column2);
-	    return tempBoard;
+	    	tempBoard.setPadding(new Insets(5));
+	    	tempBoard.setHgap(5);
+	    	tempBoard.setVgap(5);
+	    	ColumnConstraints column1 = new ColumnConstraints(500);
+	    	ColumnConstraints column2 = new ColumnConstraints(50, 150, 300);
+	    	column2.setHgrow(Priority.ALWAYS);
+	    	tempBoard.getColumnConstraints().addAll(column1, column2);
+	    	return tempBoard;
 	}
 
 	private Scene runQuestionWindow() {
-			GridPane node = this.createNode();
-
-			Label typeTruck = new Label(" What type of truck, Either write 'HGV' for Heavy \n Goods Vehicle Or 'PSV' for Public Service Vehicle.");
-			node.add(typeTruck,0,1);
-			typeTruckInput = new TextField();
-			typeTruckInput.setMaxWidth(200);
+		GridPane node = this.createNode();
+		Label typeTruck = new Label(" What type of truck, Either write 'HGV' for Heavy \n Goods Vehicle Or 'PSV' for Public Service Vehicle.");
+		node.add(typeTruck,0,1);
+		typeTruckInput = new TextField();
+		typeTruckInput.setMaxWidth(200);
 	        node.add(typeTruckInput, 0, 2);
-
-			Label noVeh = new Label(" How many trucks do you have.");
-			node.add(noVeh,0,3);
-			noVehInput = new TextField();
-			noVehInput.setMaxWidth(200);
+	        Label noVeh = new Label(" How many trucks do you have.");
+		node.add(noVeh,0,3);
+		noVehInput = new TextField();
+		noVehInput.setMaxWidth(200);
 	        node.add(noVehInput, 0, 4);
 
-			Label noHrs = new Label(" How many hours do you spend on managment.");
-			node.add(noHrs,0,5);
-			noHrsInput = new TextField();
-			noHrsInput.setMaxWidth(200);
+		Label noHrs = new Label(" How many hours do you spend on managment.");
+		node.add(noHrs,0,5);
+		noHrsInput = new TextField();
+		noHrsInput.setMaxWidth(200);
 	        node.add(noHrsInput, 0, 6);
 
 	        submit = new Button("Submit");
-			submit.setOnAction(this);
-			node.add(submit,0,7);
+		submit.setOnAction(this);
+		node.add(submit,0,7);
 
-			return questionScene = new Scene(node, 350, 250, Color.WHITE);
+		return questionScene = new Scene(node, 350, 250, Color.WHITE);
 	}
 
 	private Scene runOutputWindow(){
@@ -131,18 +129,16 @@ public class GUI extends Application implements EventHandler<ActionEvent>{
 		Text enterFileName = new Text("Pleas Enter The file Name.");
 		enterFileName.setFont(Font.font ("TIMES_ROMAN", 16));
 		node.add(enterFileName,0,2);
-
 		pdfFileName = new TextField();
 		pdfFileName.setMaxWidth(200);
-        node.add(pdfFileName, 0, 3);
+        	node.add(pdfFileName, 0, 3);
 
-        producePdf = new Button("Make PDF");// open new gui to print pdf
-        producePdf.setOnAction(this);
+        	producePdf = new Button("Make PDF");// open new gui to print pdf
+        	producePdf.setOnAction(this);
 		node.add(producePdf,0,4);
-
 		node.add(backToQuestion,0,5);
 
-        return pdfSetup = new Scene(node, 350, 250, Color.WHITE);
+	        return pdfSetup = new Scene(node, 350, 250, Color.WHITE);
 	}
 
 
