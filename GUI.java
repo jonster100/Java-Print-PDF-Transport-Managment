@@ -105,10 +105,10 @@ public class GUI extends Application implements EventHandler<ActionEvent>{
 
 	private Scene runOutputWindow(){
 		GridPane node = this.createNode();
-		AppDriver test1 = new AppDriver(3,3);
-		test1.addDataToLookup();
 		noVeh = Integer.parseInt(noVehInput.getText());
 		noHrs = Integer.parseInt(noHrsInput.getText());
+		AppDriver test1 = new AppDriver(noVeh,noHrs);
+		test1.addDataToLookup();
 		if(noHrs > test1.getNoVehicles()){
 			noHrs = test1.getNoVehicles();
 		}
