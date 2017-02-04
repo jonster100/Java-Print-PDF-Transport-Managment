@@ -62,6 +62,9 @@ public class GUI extends Application implements EventHandler<ActionEvent>{
     	launch(args);
     }
 
+	/**
+	* This method will create  GridPane which will be made and returned to better shorten the re-use of the code
+	* @return GridPane a new pane created is returned from the mehtod.*/
 	public GridPane createNode(){
 		GridPane tempBoard = new GridPane();
 	    	tempBoard.setPadding(new Insets(5));
